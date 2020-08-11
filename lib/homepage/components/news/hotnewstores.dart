@@ -10,7 +10,7 @@ class HotNewStoresPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 190,
+      height: 230,
       color: Colors.white,
       child: HotProduct(),
     );

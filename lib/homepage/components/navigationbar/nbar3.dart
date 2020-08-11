@@ -40,7 +40,7 @@ class _NBar3State extends State<NBar3> with TickerProviderStateMixin {
       return Dashboard();
     }
     if (position == 3) {
-      return a();
+      return ItemDetails();
     }
   }
 
@@ -50,7 +50,7 @@ class _NBar3State extends State<NBar3> with TickerProviderStateMixin {
     return Scaffold(
       bottomNavigationBar: FancyBottomNavigation(
         textColor: Theme.of(context).hintColor,
-        activeIconColor: Colors.white,
+        activeIconColor: Colors.white10,
         circleColor: primaryColor,
         inactiveIconColor: primaryColor,
         initialSelection: 0,

@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:queueapp/homepage/components/store_layout/slider-topshop.dart';
+import 'package:queueapp/homepage/components/travel/travel.dart';
 
-class TopShopPage extends StatelessWidget {
-  const TopShopPage({
+class TravelPage extends StatelessWidget {
+  const TravelPage({
     Key key,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 235,
+      height: 170,
       color: Colors.white,
-      child: TopShop(),
+      child: Travel(),
     );
   }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:queueapp/homepage/components/brand/brand.dart';
 import 'package:queueapp/homepage/components/navigationbar/a.dart';
 import 'package:queueapp/homepage/components/navigationbar/b.dart';
 import 'package:queueapp/homepage/components/navigationbar/nbar1.dart';
@@ -7,12 +8,16 @@ import 'package:queueapp/homepage/components/navigationbar/d.dart';
 import 'package:queueapp/homepage/components/nearshop/storesnearme-page.dart';
 import 'package:queueapp/homepage/components/product1/promotion-products.dart';
 import 'package:queueapp/homepage/components/promotion_page/top/ads-page.dart';
+import 'package:queueapp/homepage/components/recommend-travel/reco-travel.dart';
+import 'package:queueapp/homepage/components/review/review.dart';
+import 'package:queueapp/homepage/components/review/slider-review.dart';
 import 'package:queueapp/homepage/components/service_bar/category.dart';
 import 'package:queueapp/homepage/components/coupon_bar/coupong-page.dart';
 import 'package:queueapp/homepage/components/news/hotnewstores.dart';
 import 'package:queueapp/homepage/components/promotion_page/promotion-content-page.dart';
 
 import 'package:queueapp/homepage/components/store_layout/topshop-page.dart';
+import 'package:queueapp/homepage/components/travel/slider-travel.dart';
 
 // class MyApp extends StatelessWidget {
 //   // This widget is the root of your application.
@@ -100,27 +105,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
               PromotionContentPage(),
-              Container(
-                height: 50,
-                color: Colors.white,
-                child: Center(
-                  child: Column(
-                    children: <Widget>[
-                      Padding(
-                        padding: const EdgeInsets.only(top: 10, right: 250.0),
-                        child: Text(
-                          "สินค้าแนะนำ",
-                          style: TextStyle(
-                            fontSize: 22,
-                            color: Colors.black,
-                            // fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
               ProductPage(),
               Container(
                 color: Colors.white,
@@ -187,10 +171,113 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
               HotNewStoresPage(),
+              Container(
+                height: 50,
+                color: Colors.white,
+                child: Center(
+                  child: Column(
+                    children: <Widget>[
+                      Padding(
+                        padding: const EdgeInsets.only(right: 230.0),
+                        child: Text(
+                          "รีวิวจากสมาชิก",
+                          style: TextStyle(
+                            fontSize: 22,
+                            color: Colors.black,
+                            // fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              ReviewPage(),
+              Container(
+                margin: EdgeInsets.only(top: 5.0),
+                color: Colors.white,
+                child: Center(
+                  child: Column(
+                    children: <Widget>[
+                      Padding(
+                        padding: const EdgeInsets.only(right: 230.0),
+                        child: Text(
+                          "แบรนด์แนะนำ",
+                          style: TextStyle(
+                            fontSize: 22,
+                            color: Colors.black,
+                            // fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.only(left: 5.0),
+                height: 60,
+                color: Colors.white,
+                child: Brand(),
+              ),
+              Container(
+                margin: EdgeInsets.only(top: 5.0),
+                color: Colors.white,
+                child: Center(
+                  child: Column(
+                    children: <Widget>[
+                      Padding(
+                        padding: const EdgeInsets.only(right: 230.0),
+                        child: Text(
+                          "แหล่งท่องเที่ยว",
+                          style: TextStyle(
+                            fontSize: 22,
+                            color: Colors.black,
+                            // fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.only(left: 5.0, right: 5.0),
+                child: TravelPage(),
+              ),
+              Container(
+                margin: EdgeInsets.only(top: 5.0),
+                color: Colors.white,
+                child: Center(
+                  child: Column(
+                    children: <Widget>[
+                      Padding(
+                        padding: const EdgeInsets.only(right: 170.0),
+                        child: Text(
+                          "แหล่งท่องเที่ยวแนะนำ",
+                          style: TextStyle(
+                            fontSize: 22,
+                            color: Colors.black,
+                            // fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.only(left: 5.0, right: 5.0),
+                child: RecommendTravel(),
+              ),
+              SizedBox(
+                height: 5,
+              ),
             ],
           ),
         ],
       ),
+
       // This trailing comma makes auto-formatting nicer for build methods.
       // bottomNavigationBar: BottomNavigationBar(
       //     currentIndex: 0,

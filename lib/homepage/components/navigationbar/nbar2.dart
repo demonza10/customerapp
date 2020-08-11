@@ -1,5 +1,6 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:queueapp/homepage/components/navigationbar/a.dart';
 import 'package:queueapp/homepage/components/navigationbar/b.dart';
 import 'package:queueapp/homepage/components/navigationbar/c.dart';
 import 'package:queueapp/homepage/components/navigationbar/card.dart';
@@ -15,7 +16,7 @@ class BotttomNavBar extends StatefulWidget {
 
 class _BottomNavBarState extends State<BotttomNavBar> {
   var _page = 0;
-  final pages = [MyHomePage(), b(), Dashboard(), d()];
+  final pages = [MyHomePage(), ItemDetails(), Dashboard(), d()];
   @override
   Widget build(BuildContext context) {
     return Scaffold(

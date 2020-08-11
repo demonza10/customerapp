@@ -1,68 +1,46 @@
-// import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 
 // class a extends StatelessWidget {
 //   @override
 //   Widget build(BuildContext context) {
-//     return Container(
-//       height: 80.0,
-//       child: ListView(
-//         scrollDirection: Axis.horizontal,
-//         children: <Widget>[
-//           Discount(
-//             image_location: 'assets/img/3.jpg',
-//           ),
-//           Discount(
-//             image_location: 'assets/img/3.jpg',
-//           ),
-//           Discount(
-//             image_location: 'assets/img/3.jpg',
-//           ),
-//           Discount(
-//             image_location: 'assets/img/3.jpg',
-//           ),
-//         ],
+//     return Scaffold(
+//       backgroundColor: Colors.red,
+//       body: Center(
+//         child: Text("B"),
 //       ),
 //     );
 //   }
 // }
 
-// class Discount extends StatelessWidget {
-//   final String image_location;
+class ItemDetails extends StatelessWidget {
+  final Map<String, dynamic> dish;
 
-//   Discount({this.image_location});
-//   @override
-//   Widget build(BuildContext context) {
-//     return Padding(
-//       padding: const EdgeInsets.all(2.0),
-//       child: InkWell(
-//         onTap: () {},
-//         child: Container(
-//           width: 150.0,
-//           child: ListTile(
-//               title: Image.asset(
-//                 image_location,
-//                 width: 100.0,
-//                 height: 100.0,
-//               ),
-//               subtitle: Container(
-//                 alignment: Alignment.topCenter,
-//               )),
-//         ),
-//       ),
-//     );
-//   }
-// }
+  ItemDetails({this.dish});
 
-import 'package:flutter/material.dart';
-
-class a extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.red,
-      body: Center(
-        child: Text("B"),
+      backgroundColor: Colors.black,
+      body: LayoutStarts(
+        dish: dish,
       ),
+    );
+  }
+}
+
+class LayoutStarts extends StatelessWidget {
+  final Map<String, dynamic> dish;
+
+  LayoutStarts({this.dish});
+
+  @override
+  Widget build(BuildContext context) {
+    return Stack(
+      children: <Widget>[
+        // CarDetailsAnimation(dish: dish),
+        // CustomBottomSheet(context: context, dish: dish),
+        // RentButton(),
+      ],
     );
   }
 }
