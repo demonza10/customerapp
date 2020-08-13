@@ -14,7 +14,7 @@ class BasicBar extends StatefulWidget {
 class _BasicBarState extends State<BasicBar> {
   int _currentIndex = 0;
   var _page = 0;
-  final pages = [MyHomePage(), b(), c(), d()];
+  final pages = [MyHomePage(), b(), d()];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
