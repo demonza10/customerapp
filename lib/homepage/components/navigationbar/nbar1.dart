@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:queueapp/homepage/components/navigationbar/b.dart';
 import 'package:queueapp/homepage/components/navigationbar/c.dart';
 import 'package:queueapp/homepage/components/navigationbar/d.dart';
+import 'package:queueapp/homepage/components/product1/detailProduct/detail_product.dart';
 import 'package:queueapp/homepage/homescreen.dart';
 // import 'package:queueapp/homepage/search/search.dart';
 
@@ -14,7 +15,7 @@ class BasicBar extends StatefulWidget {
 class _BasicBarState extends State<BasicBar> {
   int _currentIndex = 0;
   var _page = 0;
-  final pages = [MyHomePage(), b(), d()];
+  final pages = [MyHomePage(), DetailProduct(), d()];
   @override
   Widget build(BuildContext context) {
     return Scaffold(

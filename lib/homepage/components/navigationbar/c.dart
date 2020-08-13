@@ -13,7 +13,7 @@
 // }
 
 import 'package:flutter/material.dart';
-import 'package:queueapp/homepage/components/product1/slider-products.dart';
+import 'package:queueapp/homepage/components/nearshop/slider-storesnearme-shop.dart';
 // import 'package:testtab/component/storenearby/slidestorenearby.dart';
 // import 'package:testtab/stack/ads.dart';
 

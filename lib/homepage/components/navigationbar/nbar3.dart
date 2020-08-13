@@ -6,6 +6,7 @@ import 'package:queueapp/homepage/components/navigationbar/a.dart';
 import 'package:queueapp/homepage/components/navigationbar/b.dart';
 import 'package:queueapp/homepage/components/navigationbar/c.dart';
 import 'package:queueapp/homepage/components/navigationbar/card.dart';
+import 'package:queueapp/homepage/components/product1/detailProduct/detail_product.dart';
 import 'package:queueapp/homepage/homescreen.dart';
 // import '../widgets/CusTomAppBar.dart';
 // import 'LandingPage.dart';
@@ -34,7 +35,7 @@ class _NBar3State extends State<NBar3> with TickerProviderStateMixin {
       return MyHomePage();
     }
     if (position == 1) {
-      return Center(child: b());
+      return Center(child: DetailProduct());
     }
     if (position == 2) {
       return Dashboard();

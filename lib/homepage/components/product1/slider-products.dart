@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:queueapp/homepage/components/navigationbar/b.dart';
 import 'package:queueapp/homepage/components/navigationbar/c.dart';
+import 'package:queueapp/homepage/components/product1/detailProduct/detail_product.dart';
 
 class NewProduct extends StatelessWidget {
   const NewProduct({
@@ -22,7 +24,7 @@ class NewProduct extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                       builder: (context) =>
-                          Bottombarhome3(dish: mocksup[index])),
+                          DetailProduct(product: mocksup[index])),
                 );
                 print(mocksup[index].title);
               },
