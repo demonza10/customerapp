@@ -140,8 +140,9 @@
 // }
 
 import 'package:flutter/material.dart';
-import 'package:queueapp/homepage/components/navigationbar/b.dart';
-import 'package:queueapp/homepage/components/navigationbar/c.dart';
+import 'package:queueapp/homepage/components/nearshop/detail_nearshop/detail_nearshop.dart';
+// import 'package:queueapp/homepage/components/navigationbar/b.dart';
+// import 'package:queueapp/homepage/components/navigationbar/c.dart';
 
 class NearShop extends StatelessWidget {
   const NearShop({
@@ -163,8 +164,7 @@ class NearShop extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) =>
-                          Bottombarhome3(dish: mocksup[index])),
+                      builder: (context) => DetailNear(near: mocksup[index])),
                 );
                 print(mocksup[index].title);
               },
@@ -289,6 +289,9 @@ class Mocksup {
   final String imageAssets;
   final String text1;
   final String text2;
+  final String text3;
+  final String text4;
+
   const Mocksup({
     this.title,
     this.point1,
@@ -296,6 +299,8 @@ class Mocksup {
     this.imageAssets,
     this.text1,
     this.text2,
+    this.text3,
+    this.text4,
   });
 }
 
@@ -306,6 +311,8 @@ List<Mocksup> mocksup = const <Mocksup>[
       point2: '4.0',
       text1: 'คะแนนทั่วไป',
       text2: 'คะแนนความสะอาด',
+      text3: 'รายละเอียดการเดินทาง',
+      text4: '',
       imageAssets: 'assets/img/store1.jpg'),
   const Mocksup(
       title: 'ฟิตเนส',
@@ -313,6 +320,8 @@ List<Mocksup> mocksup = const <Mocksup>[
       point2: '4.0',
       text1: 'คะแนนทั่วไป',
       text2: 'คะแนนความสะอาด',
+      text3: 'รายละเอียดการเดินทาง',
+      text4: '',
       imageAssets: 'assets/img/store4.jpg'),
   const Mocksup(
       title: 'ร้านกาแฟ',
@@ -320,5 +329,7 @@ List<Mocksup> mocksup = const <Mocksup>[
       point2: '4.0',
       text1: 'คะแนนทั่วไป',
       text2: 'คะแนนความสะอาด',
+      text3: 'รายละเอียดการเดินทาง',
+      text4: '',
       imageAssets: 'assets/img/store3.jpg'),
 ];

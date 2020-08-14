@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:queueapp/homepage/components/product1/detailProduct/slide_detail.dart';
 import 'package:queueapp/homepage/components/product1/slider-products.dart';
+import 'package:queueapp/homepage/homescreen.dart';
 // import 'package:testtab/component/storenearby/slidestorenearby.dart';
 // import 'package:testtab/stack/ads.dart';
 
@@ -22,10 +23,15 @@ class _DetailProductState extends State<DetailProduct> {
           SlideDetailP(),
           Padding(
             padding: EdgeInsets.all(15),
+            // child: GestureDetector(
+            //   onTap: () {
+            //     Navigator(MyHomePage());
+            //   },
             child: Container(
               child: Text(widget.product.title,
                   style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
             ),
+            // ),
           ),
           Container(
             width: 300.0,
