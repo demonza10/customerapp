@@ -18,82 +18,81 @@ class NewProduct extends StatelessWidget {
           (index) => Container(
             // height: 200,
             width: 125.0,
-            child: GestureDetector(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) =>
-                          DetailProduct(product: mocksup[index])),
-                );
-                print(mocksup[index].title);
-              },
-              child: Card(
-                child: Wrap(
-                  children: <Widget>[
-                    Image.asset(
-                      mocksup[index].imageAssets,
-                      cacheHeight: 130,
-                      cacheWidth: 170,
-                      // fit: BoxFit.cover,
-                    ),
-                    Row(
-                      children: <Widget>[
-                        Padding(
-                          padding: const EdgeInsets.only(top: 3.0, left: 2.0),
-                          child: Container(
-                            child: Text(
-                              mocksup[index].title,
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 14,
-                                fontWeight: FontWeight.bold,
-                              ),
+            // child: GestureDetector(
+            // onTap: () {
+            //   Navigator.push(
+            //     context,
+            //     MaterialPageRoute(
+            //         builder: (context) =>
+            //             DetailProduct(product: mocksup[index])),
+            //   );
+            //   print(mocksup[index].title);
+            // },
+            child: Card(
+              child: Wrap(
+                children: <Widget>[
+                  Image.asset(
+                    mocksup[index].imageAssets,
+                    cacheHeight: 130,
+                    cacheWidth: 170,
+                    // fit: BoxFit.cover,
+                  ),
+                  Row(
+                    children: <Widget>[
+                      Padding(
+                        padding: const EdgeInsets.only(top: 3.0, left: 2.0),
+                        child: Container(
+                          child: Text(
+                            mocksup[index].title,
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 14,
+                              fontWeight: FontWeight.bold,
                             ),
                           ),
                         ),
-                      ],
-                    ),
-                    Column(
-                      children: <Widget>[
-                        Row(
-                          children: <Widget>[
-                            Padding(
-                              padding: const EdgeInsets.only(left: 2.0),
-                              child: Container(
-                                child: Text(
-                                  "ราคา",
-                                  style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.bold,
-                                  ),
+                      ),
+                    ],
+                  ),
+                  Column(
+                    children: <Widget>[
+                      Row(
+                        children: <Widget>[
+                          Padding(
+                            padding: const EdgeInsets.only(left: 2.0),
+                            child: Container(
+                              child: Text(
+                                "ราคา",
+                                style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.bold,
                                 ),
                               ),
                             ),
-                            Padding(
-                              padding:
-                                  const EdgeInsets.only(top: 3.0, left: 5.0),
-                              child: Container(
-                                child: Text(
-                                  mocksup[index].price,
-                                  style: TextStyle(
-                                    // color: Colors.white,
-                                    color: Colors.orange[900],
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.bold,
-                                  ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 3.0, left: 5.0),
+                            child: Container(
+                              child: Text(
+                                mocksup[index].price,
+                                style: TextStyle(
+                                  // color: Colors.white,
+                                  color: Colors.orange[900],
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
                                 ),
                               ),
                             ),
-                          ],
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ],
               ),
             ),
+            // ),
           ),
         ),
       ),

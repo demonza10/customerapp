@@ -1,144 +1,3 @@
-// import 'package:flutter/material.dart';
-
-// class NearShop extends StatelessWidget {
-//   Container MyArticles(
-//     String imgVal,
-//     String heading,
-//     String point,
-//     String point2,
-//     String text1,
-//     String text2,
-//   ) {
-//     return Container(
-//       width: 150.0,
-//       child: Card(
-//         child: Wrap(
-//           children: <Widget>[
-//             Center(
-//               child: Image.asset(
-//                 imgVal,
-//                 height: 100.0,
-//                 // width: 100.0,
-//                 // fit: BoxFit.contain,
-//               ),
-//             ),
-//             Container(
-//               margin: EdgeInsets.only(left: 5.0),
-//               child: Text(heading),
-//             ),
-//             Row(
-//               children: <Widget>[
-//                 Container(
-//                   // color: Colors.yellow,
-//                   margin: const EdgeInsets.only(
-//                       top: 5.0, bottom: 2.0, right: 5, left: 5),
-//                   decoration: BoxDecoration(
-//                     color: Colors.orange,
-//                     borderRadius: BorderRadius.circular(10),
-//                   ),
-//                   padding: EdgeInsets.symmetric(
-//                     vertical: 0,
-//                     horizontal: 5,
-//                   ),
-//                   child: Row(
-//                     children: <Widget>[
-//                       Text(
-//                         point,
-//                         style: TextStyle(
-//                           color: Colors.white,
-//                         ),
-//                       ),
-//                       Padding(
-//                         padding: const EdgeInsets.only(bottom: 1.0),
-//                         child: Icon(
-//                           Icons.star,
-//                           color: Colors.white,
-//                         ),
-//                       ),
-//                     ],
-//                   ),
-//                 ),
-//                 Container(
-//                   child: Text(
-//                     text1,
-//                     style: TextStyle(
-//                       color: Colors.black,
-//                       fontSize: 10,
-//                     ),
-//                   ),
-//                 ),
-//               ],
-//             ),
-//             Row(
-//               children: <Widget>[
-//                 Container(
-//                   // color: Colors.yellow,
-//                   margin: const EdgeInsets.only(
-//                       top: 5.0, bottom: 2.0, right: 5, left: 5),
-//                   decoration: BoxDecoration(
-//                     color: Colors.orange,
-//                     borderRadius: BorderRadius.circular(10),
-//                   ),
-//                   padding: EdgeInsets.symmetric(
-//                     vertical: 0,
-//                     horizontal: 5,
-//                   ),
-//                   child: Row(
-//                     children: <Widget>[
-//                       Text(
-//                         point2,
-//                         style: TextStyle(
-//                           color: Colors.white,
-//                         ),
-//                       ),
-//                       Padding(
-//                         padding: const EdgeInsets.only(bottom: 1.0),
-//                         child: Icon(
-//                           Icons.star,
-//                           color: Colors.white,
-//                         ),
-//                       ),
-//                     ],
-//                   ),
-//                 ),
-//                 Container(
-//                   child: Text(
-//                     text2,
-//                     style: TextStyle(
-//                       color: Colors.black,
-//                       fontSize: 9.0,
-//                     ),
-//                   ),
-//                 ),
-//               ],
-//             ),
-//           ],
-//         ),
-//       ),
-//     );
-//   }
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//         body: Container(
-//       margin: EdgeInsets.only(top: 5.0, bottom: 35),
-//       height: 220.0,
-//       child: ListView(
-//         scrollDirection: Axis.horizontal,
-//         children: <Widget>[
-//           MyArticles("assets/img/store1.jpg", "ร้านตัดผม", "5.0", "5.0",
-//               "คะแนนทั่วไป", "คะแนนความสะอาด"),
-//           MyArticles("assets/img/store4.jpg", "ฟิตเนส", "4.0", "5.0",
-//               "คะแนนทั่วไป", "คะแนนความสะอาด"),
-//           MyArticles("assets/img/store3.jpg", "ร้านกาแฟ", "3.0", "5.0",
-//               "คะแนนทั่วไป", "คะแนนความสะอาด"),
-//         ],
-//       ),
-//     ));
-//   }
-// }
-
 import 'package:flutter/material.dart';
 import 'package:queueapp/homepage/components/nearshop/detail_nearshop/detail_nearshop.dart';
 // import 'package:queueapp/homepage/components/navigationbar/b.dart';
@@ -311,8 +170,10 @@ List<Mocksup> mocksup = const <Mocksup>[
       point2: '4.0',
       text1: 'คะแนนทั่วไป',
       text2: 'คะแนนความสะอาด',
-      text3: 'รายละเอียดการเดินทาง',
-      text4: '',
+      text3:
+          'รายละเอียด\nเวลาเปิด-เวลาปิด: เปิดทุกวัน 8.00 - 18.00\n\nบริการของร้าน\n-มีที่จอดรถ\n-บริการ Wi-fi ฟรี\n-รับจองล่วงหน้า\n-รับตัดผมเด็ก\n\nช่วงราคา\nผู้ใหญ่ 150 บาท\nเด็ก 100 บาท',
+      text4:
+          'บริการความสะอาด\n\nมาตการทำความสะอาด\n\n-มีการทำความสะอาดพื้นทางเดินและผนัง\nโดยใช้น้ำยาทำความสะอาดแบบฆ่าเชื้อ ทุกๆ 6 ชั่วโมง\n\n-มีการทำความสะอาดอุปกรณ์ทุกครั้งหลังให้บริการ\n\n-มีแอลกอฮอร์ทำความสะอาดพร้อมให้บริการลูกค้าที่มาใช้บริการ',
       imageAssets: 'assets/img/store1.jpg'),
   const Mocksup(
       title: 'ฟิตเนส',
@@ -320,8 +181,10 @@ List<Mocksup> mocksup = const <Mocksup>[
       point2: '4.0',
       text1: 'คะแนนทั่วไป',
       text2: 'คะแนนความสะอาด',
-      text3: 'รายละเอียดการเดินทาง',
-      text4: '',
+      text3:
+          'รายละเอียด\nเวลาเปิด-เวลาปิด: เปิดทุกวัน 8.00 - 18.00\n\nบริการของร้าน\n-มีที่จอดรถ\n-บริการ Wi-fi ฟรี\n-รับจองล่วงหน้า\n-รับตัดผมเด็ก\n\nช่วงราคา\nผู้ใหญ่ 150 บาท\nเด็ก 100 บาท',
+      text4:
+          'บริการความสะอาด\n\nมาตการทำความสะอาด\n\n-มีการทำความสะอาดพื้นทางเดินและผนัง\nโดยใช้น้ำยาทำความสะอาดแบบฆ่าเชื้อ ทุกๆ 6 ชั่วโมง\n\n-มีการทำความสะอาดอุปกรณ์ทุกครั้งหลังให้บริการ\n\n-มีแอลกอฮอร์ทำความสะอาดพร้อมให้บริการลูกค้าที่มาใช้บริการ',
       imageAssets: 'assets/img/store4.jpg'),
   const Mocksup(
       title: 'ร้านกาแฟ',
@@ -329,7 +192,9 @@ List<Mocksup> mocksup = const <Mocksup>[
       point2: '4.0',
       text1: 'คะแนนทั่วไป',
       text2: 'คะแนนความสะอาด',
-      text3: 'รายละเอียดการเดินทาง',
-      text4: '',
+      text3:
+          'รายละเอียด\nเวลาเปิด-เวลาปิด: เปิดทุกวัน 8.00 - 18.00\n\nบริการของร้าน\n-มีที่จอดรถ\n-บริการ Wi-fi ฟรี\n-รับจองล่วงหน้า\n-รับตัดผมเด็ก\n\nช่วงราคา\nผู้ใหญ่ 150 บาท\nเด็ก 100 บาท',
+      text4:
+          'บริการความสะอาด\n\nมาตการทำความสะอาด\n\n-มีการทำความสะอาดพื้นทางเดินและผนัง\nโดยใช้น้ำยาทำความสะอาดแบบฆ่าเชื้อ ทุกๆ 6 ชั่วโมง\n\n-มีการทำความสะอาดอุปกรณ์ทุกครั้งหลังให้บริการ\n\n-มีแอลกอฮอร์ทำความสะอาดพร้อมให้บริการลูกค้าที่มาใช้บริการ',
       imageAssets: 'assets/img/store3.jpg'),
 ];

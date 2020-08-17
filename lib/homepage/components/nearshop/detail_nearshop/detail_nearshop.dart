@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:queueapp/homepage/components/nearshop/detail_nearshop/detail_review/review_shop.dart';
 import 'package:queueapp/homepage/components/nearshop/detail_nearshop/mix_slide.dart';
 import 'package:queueapp/homepage/components/nearshop/detail_nearshop/slid_nearshop.dart';
 import 'package:queueapp/homepage/components/nearshop/slider-storesnearme-shop.dart';
+import 'package:smooth_star_rating/smooth_star_rating.dart';
 // import 'package:testtab/component/storenearby/slidestorenearby.dart';
 // import 'package:testtab/stack/ads.dart';
 
@@ -33,7 +35,10 @@ class _DetailNearState extends State<DetailNear> {
               Container(
                 margin: const EdgeInsets.only(
                     top: 10.0, bottom: 2.0, right: 5, left: 240),
-                child: Icon(Icons.bookmark),
+                child: Icon(
+                  Icons.bookmark,
+                  color: Colors.orange,
+                ),
               )
             ],
           ),
@@ -143,23 +148,35 @@ class _DetailNearState extends State<DetailNear> {
             children: <Widget>[
               Container(
                 margin: EdgeInsets.only(left: 6.0, top: 5.0),
-                height: 400,
+                height: 280,
                 width: 190,
-                color: Colors.red,
+                // color: Colors.red,
+                child: Text(
+                  widget.near.text3, // point,
+                  style: TextStyle(
+                    color: Colors.black,
+                  ),
+                ),
               ),
               Container(
                 margin: EdgeInsets.only(right: 6.0, top: 5.0),
-                height: 400,
+                height: 280,
                 width: 190,
-                color: Colors.blue,
+                // color: Colors.blue,
+                child: Text(
+                  widget.near.text4, // point,
+                  style: TextStyle(
+                    color: Colors.black,
+                  ),
+                ),
               ),
             ],
           ),
           Container(
             margin:
                 const EdgeInsets.only(top: 5.0, bottom: 2.0, right: 5, left: 5),
-            child: Text("รายละเอียด",
-                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
+            child: Text("รายละเอียดการเดินทาง",
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
           ),
           Container(
             margin: EdgeInsets.all(2.0),
@@ -283,30 +300,104 @@ class _DetailNearState extends State<DetailNear> {
             ],
           ),
           Container(
+            margin: EdgeInsets.only(left: 5.0),
             // color: Colors.red,
-            child: Text("อันดับ #49 จาก 1500"),
+            child: Text(
+              "อันดับ #49 จาก 1500",
+              style: TextStyle(
+                fontSize: 20,
+              ),
+            ),
           ),
           Container(
+            margin: EdgeInsets.only(left: 5.0, bottom: 5),
             // color: Colors.blue,
-            child: Text("ร้านตัดผมในจังหวัดปทุมธานี"),
+            child: Text(
+              "ร้านตัดผมในจังหวัดปทุมธานี",
+            ),
           ),
           Row(
             children: <Widget>[
-              Container(
-                height: 100,
-                width: 100,
-                color: Colors.yellow,
+              Column(
+                children: [
+                  Container(
+                    margin: EdgeInsets.only(left: 2.0),
+                    child: SmoothStarRating(
+                      allowHalfRating: false,
+                      starCount: 5,
+                      rating: 5,
+                      size: 20.0,
+                      color: Color(0xFFFEBF00),
+                      borderColor: Color(0xFFFEBF00),
+                      spacing: 0.0,
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(left: 2.0),
+                    child: SmoothStarRating(
+                      allowHalfRating: false,
+                      starCount: 5,
+                      rating: 4,
+                      size: 20.0,
+                      color: Color(0xFFFEBF00),
+                      borderColor: Color(0xFFFEBF00),
+                      spacing: 0.0,
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(left: 2.0),
+                    child: SmoothStarRating(
+                      allowHalfRating: false,
+                      starCount: 5,
+                      rating: 3,
+                      size: 20.0,
+                      color: Color(0xFFFEBF00),
+                      borderColor: Color(0xFFFEBF00),
+                      spacing: 0.0,
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(left: 2.0),
+                    child: SmoothStarRating(
+                      allowHalfRating: false,
+                      starCount: 5,
+                      rating: 2,
+                      size: 20.0,
+                      color: Color(0xFFFEBF00),
+                      borderColor: Color(0xFFFEBF00),
+                      spacing: 0.0,
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(left: 2.0),
+                    child: SmoothStarRating(
+                      allowHalfRating: false,
+                      starCount: 5,
+                      rating: 1,
+                      size: 20.0,
+                      color: Color(0xFFFEBF00),
+                      borderColor: Color(0xFFFEBF00),
+                      spacing: 0.0,
+                    ),
+                  ),
+                ],
               ),
               Container(
                 height: 100,
-                width: 292,
+                width: 290,
                 color: Colors.orange,
               ),
             ],
           ),
           Container(
-            color: Colors.pink,
+            // color: Colors.pink,
+            margin: EdgeInsets.all(5),
             child: Text("เรียงตาม: ความยอดนิยม/ล่าสุด"),
+          ),
+          Container(
+            height: 200,
+            color: Colors.grey,
+            child: ReviewShop(),
           ),
         ],
       ),
