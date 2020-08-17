@@ -37,6 +37,7 @@ dependencies:
   flutter_swiper: ^1.1.6
   flip_card: ^0.2.1
   flare_flutter: ^1.5.5
+  longdo_maps_flutter: ^1.0.0
   
   
   

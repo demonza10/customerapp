@@ -9,86 +9,103 @@ class ReviewShop extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: ListView(
-        scrollDirection: Axis.vertical,
+    return Container(
+      color: Colors.white,
+      child: ListView(
+        scrollDirection: Axis.horizontal,
         children: List.generate(
-            mocksup.length,
-            (index) => Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: Container(
-                    height: 300.0,
-                    width: 300.0,
-                    child: Material(
-                      color: Colors.white,
-                      elevation: 14.0,
-                      borderRadius: BorderRadius.circular(15.0),
-                      shadowColor: Color(0x802196F3),
-                      child: Row(
+          mocksup.length,
+          (index) => Container(
+            height: 300.0,
+            width: 300.0,
+            child: Card(
+              child: Wrap(
+                children: <Widget>[
+                  Row(
+                    children: <Widget>[
+                      Container(
+                        // color: Colors.green,
+                        // margin: EdgeInsets.only(left: 5.0, bottom: 200.0),
+                        height: 50.0,
+                        width: 50.0,
+                        child: CircleAvatar(
+                          radius: 20,
+                          backgroundImage:
+                              AssetImage(mocksup[index].imageAssets),
+                        ),
+                      ),
+                      Column(
                         children: <Widget>[
                           Container(
-                            // color: Colors.green,
-                            margin: EdgeInsets.only(left: 5.0, bottom: 200.0),
-                            height: 50.0,
-                            width: 50.0,
-                            child: CircleAvatar(
-                              radius: 20,
-                              backgroundImage:
-                                  AssetImage(mocksup[index].imageAssets),
+                            // color: Colors.red,
+                            // margin: EdgeInsets.only(right: 130),
+                            width: 150.0,
+                            child: Text(
+                              mocksup[index].title,
+                              style: TextStyle(fontSize: 20.0),
                             ),
                           ),
-                          Column(
-                            children: <Widget>[
-                              Container(
-                                // color: Colors.red,
-                                margin: EdgeInsets.only(top: 25.0, right: 135),
-                                width: 150.0,
-                                child: Text(
-                                  mocksup[index].title,
-                                  style: TextStyle(fontSize: 20.0),
-                                ),
-                              ),
-                              Container(
-                                // color: Colors.blue,
-                                margin: EdgeInsets.only(right: 190),
-                                child: SmoothStarRating(
-                                  allowHalfRating: false,
-                                  starCount: 5,
-                                  rating: 5,
-                                  size: 20.0,
-                                  color: Color(0xFFFEBF00),
-                                  borderColor: Color(0xFFFEBF00),
-                                  spacing: 0.0,
-                                ),
-                              ),
-                              Container(
-                                margin: EdgeInsets.only(left: 2.0, right: 215),
-                                child: Text(
-                                  mocksup[index].confirm,
-                                  style: TextStyle(
-                                      color: Colors.green, fontSize: 10.0),
-                                ),
-                              ),
-                              Container(
-                                // color: Colors.purple,
-                                margin: EdgeInsets.only(right: 150, top: 5.0),
-                                child: Text(
-                                  mocksup[index].review,
-                                ),
-                              ),
-                              Container(
-                                height: 100,
-
-                                color: Colors.blue,
-                                // child: SlidImageBar(),
-                              ),
-                            ],
+                          Container(
+                            // color: Colors.blue,
+                            // margin: EdgeInsets.only(right: 180),
+                            child: SmoothStarRating(
+                              allowHalfRating: false,
+                              starCount: 5,
+                              rating: 5,
+                              size: 20.0,
+                              color: Color(0xFFFEBF00),
+                              borderColor: Color(0xFFFEBF00),
+                              spacing: 0.0,
+                            ),
+                          ),
+                          Container(
+                            // margin: EdgeInsets.only(right: 200),
+                            child: Text(
+                              mocksup[index].confirm,
+                              style: TextStyle(
+                                  color: Colors.green, fontSize: 10.0),
+                            ),
                           ),
                         ],
                       ),
-                    ),
+                    ],
                   ),
-                )),
+                  Column(
+                    children: <Widget>[
+                      Container(
+                        // color: Colors.purple,
+                        // margin: EdgeInsets.only(right: 150, top: 5.0),
+                        child: Text(
+                          mocksup[index].review,
+                        ),
+                      ),
+                      Container(
+                        height: 100,
+                        width: 300,
+                        child: GridView.count(
+                          scrollDirection: Axis.horizontal,
+                          crossAxisCount: 1,
+                          children: List.generate(mocksup.length, (index) {
+                            return Container(
+                              child: Card(
+                                // child: Text("data"),
+                                // color: Colors.amber,
+                                child: Image.asset(
+                                  mocksup[index].imageAssets,
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                            );
+                          }),
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
       ),
     );
   }
@@ -109,13 +126,13 @@ List<Review> mocksup = const <Review>[
       review: 'ร้านสวยและสะอาดมาก\nการบริการก็ดีใส่ใจลูกค้า',
       imageAssets: 'assets/img/product7.jpg'),
   const Review(
-      title: 'สินค้า2',
+      title: 'Sarul Pattamatin',
       confirm: 'ยืนยันตัวตนแล้ว',
       review: 'ร้านสวยและสะอาดมาก\nการบริการก็ดีใส่ใจลูกค้า',
       imageAssets: 'assets/img/product8.jpg'),
   const Review(
-      title: 'สินค้า3',
+      title: 'Sarul Pattamatin',
       confirm: 'ยืนยันตัวตนแล้ว',
       review: 'ร้านสวยและสะอาดมาก\nการบริการก็ดีใส่ใจลูกค้า',
-      imageAssets: 'assets/img/product6.jpg'),
+      imageAssets: 'assets/img/product1.jpg'),
 ];
