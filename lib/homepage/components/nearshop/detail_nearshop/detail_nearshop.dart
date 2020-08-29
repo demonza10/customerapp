@@ -395,10 +395,13 @@ class _DetailNearState extends State<DetailNear> {
             child: Text("เรียงตาม: ความยอดนิยม/ล่าสุด"),
           ),
           Container(
-            height: 200,
+            height: 500,
             color: Colors.grey,
             child: ReviewShop(),
           ),
+          // SizedBox(
+          //   width: 200.0,
+          // ),
         ],
       ),
     );

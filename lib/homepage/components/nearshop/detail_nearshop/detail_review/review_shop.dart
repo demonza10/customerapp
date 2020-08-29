@@ -10,14 +10,14 @@ class ReviewShop extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      // height: 1000.0,
       color: Colors.white,
       child: ListView(
-        scrollDirection: Axis.horizontal,
+        // scrollDirection: Axis.horizontal,
         children: List.generate(
           mocksup.length,
           (index) => Container(
-            height: 300.0,
-            width: 300.0,
+            height: 280.0,
             child: Card(
               child: Wrap(
                 children: <Widget>[
@@ -34,11 +34,14 @@ class ReviewShop extends StatelessWidget {
                               AssetImage(mocksup[index].imageAssets),
                         ),
                       ),
+                      SizedBox(
+                        width: 10.0,
+                      ),
                       Column(
                         children: <Widget>[
                           Container(
                             // color: Colors.red,
-                            // margin: EdgeInsets.only(right: 130),
+                            margin: EdgeInsets.only(right: 20),
                             width: 150.0,
                             child: Text(
                               mocksup[index].title,
@@ -47,7 +50,7 @@ class ReviewShop extends StatelessWidget {
                           ),
                           Container(
                             // color: Colors.blue,
-                            // margin: EdgeInsets.only(right: 180),
+                            margin: EdgeInsets.only(right: 80),
                             child: SmoothStarRating(
                               allowHalfRating: false,
                               starCount: 5,
@@ -59,7 +62,7 @@ class ReviewShop extends StatelessWidget {
                             ),
                           ),
                           Container(
-                            // margin: EdgeInsets.only(right: 200),
+                            margin: EdgeInsets.only(right: 100),
                             child: Text(
                               mocksup[index].confirm,
                               style: TextStyle(
@@ -74,14 +77,14 @@ class ReviewShop extends StatelessWidget {
                     children: <Widget>[
                       Container(
                         // color: Colors.purple,
-                        // margin: EdgeInsets.only(right: 150, top: 5.0),
+                        margin: EdgeInsets.only(right: 220, top: 5.0),
                         child: Text(
                           mocksup[index].review,
                         ),
                       ),
                       Container(
-                        height: 100,
-                        width: 300,
+                        margin: EdgeInsets.only(top: 20.0),
+                        height: 150,
                         child: GridView.count(
                           scrollDirection: Axis.horizontal,
                           crossAxisCount: 1,
@@ -126,12 +129,12 @@ List<Review> mocksup = const <Review>[
       review: 'ร้านสวยและสะอาดมาก\nการบริการก็ดีใส่ใจลูกค้า',
       imageAssets: 'assets/img/product7.jpg'),
   const Review(
-      title: 'Sarul Pattamatin',
+      title: 'Sarawit Godview',
       confirm: 'ยืนยันตัวตนแล้ว',
       review: 'ร้านสวยและสะอาดมาก\nการบริการก็ดีใส่ใจลูกค้า',
       imageAssets: 'assets/img/product8.jpg'),
   const Review(
-      title: 'Sarul Pattamatin',
+      title: 'nova Kingnava',
       confirm: 'ยืนยันตัวตนแล้ว',
       review: 'ร้านสวยและสะอาดมาก\nการบริการก็ดีใส่ใจลูกค้า',
       imageAssets: 'assets/img/product1.jpg'),

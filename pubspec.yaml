@@ -38,6 +38,7 @@ dependencies:
   flip_card: ^0.2.1
   flare_flutter: ^1.5.5
   longdo_maps_flutter: ^1.0.0
+  http: ^0.11.3+16
   
   
   
